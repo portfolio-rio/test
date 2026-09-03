@@ -1,7 +1,8 @@
 
+
 :root{
-    --bg: #cfc8bd;
-    --c1: #2b2621;
+    --c1: #fff;
+    --c2: #000;
     --fontsize_1: 13px;
     --fontsize_2: 16px;
 
@@ -16,16 +17,52 @@
 
 @media screen and (min-width: 768px){
     :root{
-        --fontsize_1: 16px;
+        
     }
 }
 
 
+/*----------------------------------------------------------------------------------*/
+
+main{
+    z-index: 1;
+    position: relative;
+}
+
 
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 
+.bg{
+    width: 101%;
+    height: 101%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+a.reservation > img{
+    width: fit-content;
+    height: 15px;
+}
+
+.language-switch > button img,
+.language-switch > span img{
+    width: fit-content;
+    height: 11px;
+}
+.language-switch > span{
+    margin: 0 3px;
+}
+
+.menu-list a > img{
+    width: fit-content;
+    height: 11px;
+}
 
 
 /*----------------------------------------------------------------------------------*/
@@ -38,7 +75,7 @@
 .menu-toggle {
     position: absolute;
     right: 20px;
-    bottom: 30px;
+    bottom: 40px;
     width: var(--box-w);
     height: var(--box-h);
     cursor: pointer;
@@ -82,7 +119,7 @@
 .menu-list {
     position: absolute;
     right: 20px;
-    bottom: 90px;
+    bottom: 60px;
     text-align: right;
     list-style: none;
     margin: 0;
@@ -127,11 +164,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 24px;
-    color: var(--c1);
-    text-decoration: none;
-    font-size: var(--fontsize_1);
-    letter-spacing: 1px;
+    bottom: 38px;
 
     z-index: 100;
 }
@@ -141,8 +174,13 @@
 .language-switch {
     position: absolute;
     right: 20px;
-    top: 30px;
+    top: 40px;
     z-index: 100;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .language-switch button {
@@ -179,10 +217,8 @@
 /*----------------------------------------------------------------------------------*/
 /* message */
 
-
-/* message-group */
-.message-group{
-    width: 90%;
+.message{
+    width: 100%;
     height: 80%;
     margin: 0 auto;
     padding: 0;
@@ -191,6 +227,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     overflow-y: auto;
     &::-webkit-scrollbar {
@@ -202,20 +242,15 @@
     z-index: 1;
 }
 
-.message-group p{
-    font-size: var(--fontsize_1);
-    line-height: 2;
+.message img{
+    width: 75%;
+    height: auto;
 }
 
 @media screen and (min-width: 768px){
-    .message-group{
-        width: 100%;
-        height: 100%;
-    }
-
-    .message-group p{
+    .message img{
         width: fit-content;
-        margin: 100px auto;
+        height: 100%;
     }
 }
 
@@ -227,7 +262,7 @@
 /* info */
 
 .info{
-    width: 90%;
+    width: 100%;
     height: 80%;
     margin: 0 auto;
     padding: 0;
@@ -236,6 +271,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     overflow-y: auto;
     &::-webkit-scrollbar {
@@ -248,46 +288,28 @@
 }
 
 .info > div{
-    width: 100%;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
     overflow: hidden;
+
+    color: var(--c1);
+    font-size: var(--fontsize_1);
+    line-height: 2;
 }
 
-/* .info > div.text{
-
-} */
-
-    .info > div.text p{
-        font-size: var(--fontsize_1);
-        line-height: 2;
-    }
-
-/* .info > div.map{
-} */
-
-    iframe[src*="www.google.com/maps/embed"] {
-        aspect-ratio: 4 / 3;
-        width: 100%;
-        height: auto;
-    }
-
+iframe[src*="www.google.com/maps/embed"] {
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    height: auto;
+}
 
 @media screen and (min-width: 768px){
     .info{
-        width: 60%;
-        height: auto;
-        margin: 0 auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-
-        flex-direction: row;
-    }
-
-    .info > div{
-        width: 50%;
+        height: 75%;
     }
 }
+
 
 
 /*----------------------------------------------------------------------------------*/
@@ -297,8 +319,8 @@
 
 
 .photo.swiper {
-    width: 75%;
-    height: 50%;
+    width: 100%;
+    height: fit-content;
     margin: 0 auto;
     padding: 0;
     overflow: inherit;
@@ -309,22 +331,15 @@
     transform: translate(-50%,-50%);
 }
 
-
 .photo.swiper .swiper-wrapper{
     width: 100%;
 }
 
 .photo.swiper .swiper-slide {
-    /* width: 90%;
-    height: auto;
-    margin: 0 auto;
-    margin-left: 20px !important;
-    padding: 0; */
-
     display: flex;
     justify-content: center;
     align-items: center;
-    aspect-ratio: 4/3 !important;
+    aspect-ratio: 1/1 !important;
 }
 
 .photo.swiper .swiper-slide img {
@@ -334,6 +349,11 @@
     display: block;
 }
 
+@media screen and (min-width: 768px){
+    .photo.swiper {
+        width: 30%;        
+    }
+}
 
 
 /*----------------------------------------------------------------------------------*/
@@ -342,29 +362,42 @@
 /* reserve */
 
 .reserve{
-    width: 90%;
-    height: auto;
-    margin: 80px auto 0;
+    width: 100%;
+    height: 80%;
+    margin: 0 auto;
     padding: 0;
-    position: relative;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    text-align: center;
-}
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 
-.reserve > p{
+    z-index: 1;
+
     font-size: var(--fontsize_1);
+    text-align: center;
+    color: var(--c1);
 }
 
 .box{
-    width: 100%;
+    width: 90%;
     height: auto;
-    margin: 1rem auto 2.5rem;
-    padding: 1rem 0;
+    margin: 1rem auto;
+    padding: 1rem;
 
-    border: .5px solid #000;
+    border: .5px solid #fff;
 }
 
 .re_tel > a{
@@ -411,19 +444,6 @@
 .re_online > div.text span{
     font-size: .75em;
 }
-
-
-/* .re_online .img{
-    width: 3rem;
-    height: 3rem;
-    aspect-ratio: 1/1;
-}
-
-.re_online .arw{
-    width: 1rem;
-    height: 1rem;
-    aspect-ratio: 1/1;
-} */
 
 @media screen and (min-width: 768px){
     .reserve{

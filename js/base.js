@@ -54,12 +54,12 @@ buttons.forEach(button => {
 // swiper --------------------------------------------------
 
 const swiper = new Swiper('.photo.swiper', {
-    loop: true,
+    // loop: true,
     slidesPerView: 1,
     spaceBetween: 20,
     speed: 1000,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
 });
