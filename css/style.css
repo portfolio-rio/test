@@ -228,13 +228,23 @@
 
 .info{
     width: 90%;
-    height: auto;
-    margin: 80px auto 0;
+    height: 80%;
+    margin: 0 auto;
     padding: 0;
-    position: relative;
 
-    display: flex;
-    flex-direction: column;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    z-index: 1;
 }
 
 .info > div{
@@ -387,7 +397,7 @@
 }
 
 .re_online > div img{
-    width: 50%;
+    width: 30%;
 }
 
 .re_online > div.arw img{
