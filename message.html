@@ -5,7 +5,7 @@
     <!-- TEST
     ウェブリンク
     img/favicon-32x32.svg
-    ?●1 -->
+    ?●2 -->
 
 
 	<meta charset="UTF-8">
@@ -37,11 +37,11 @@
 	<link rel="stylesheet" href="css/cdn/reset.css">
 	<link rel="stylesheet" href="css/cdn/swiper.css">
 
-	<link rel="stylesheet" href="css/style.css?●1">
+	<link rel="stylesheet" href="css/style.css?●2">
 
 	<!-- js -->
-	<script src="js/cdn/jquery.js?●1"></script>
-	<script src="js/cdn/swiper.js?●1"></script>
+	<script src="js/cdn/jquery.js?●2"></script>
+	<script src="js/cdn/swiper.js?●2"></script>
 
     <!-- font -->
     <link
@@ -53,30 +53,31 @@
 <body>
 
 
+	<div class="hamburger">
+		<button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false">
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</button>
+		<ul class="menu-list" id="menuList">
+			<li><a href="message.html">MESSAGE</a></li>
+			<li><a href="https://www.instagram.com/tensokatahei/">INSTAGRAM</a></li>
+			<li><a href="info.html">INFO</a></li>
+			<li><a href="photo.html">PHOTO</a></li>
+		</ul>
+	</div>
+
+	<a class="reservation"
+	href="reservation.html">Reservation</a>
+
+	<div class="language-switch">
+		<button type="button" data-lang="ja">JP</button>
+		<span>/</span>
+		<button type="button" data-lang="en">EN</button>
+	</div>
+
+
 	<!-- header -->
-	<header class="header">
-
-        <div class="hamburger">
-            <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く" aria-expanded="false">
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-            <ul class="menu-list" id="menuList">
-                <li><a href="message.html">MESSAGE</a></li>
-                <li><a href="https://www.instagram.com/tensokatahei/">INSTAGRAM</a></li>
-                <li><a href="info.html">INFO</a></li>
-                <li><a href="photo.html">PHOTO</a></li>
-            </ul>
-        </div>
-
-        <a class="reservation"
-		href="reservation.html">Reservation</a>
-
-        <div class="language-switch">
-            <button type="button" data-lang="ja">JP</button>
-            <span>/</span>
-            <button type="button" data-lang="en">EN</button>
-        </div>
+	<header class="header"></header>
 
 	</header>
 	<!-- header -->
@@ -164,8 +165,8 @@
 	<!-- footer -->
 
 
-	<script src="js/base.js?●1"></script>
-	<script src="js/swi.js?●1"></script>
+	<script src="js/base.js?●2"></script>
+	<script src="js/swi.js?●2"></script>
 
 
 </body>
