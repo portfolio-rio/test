@@ -263,7 +263,7 @@ a.reservation > img{
 
 .info{
     width: 100%;
-    height: 75%;
+    height: 80%;
     margin: 0 auto;
     padding: 0;
 
@@ -363,7 +363,7 @@ iframe[src*="www.google.com/maps/embed"] {
 
 .reserve{
     width: 100%;
-    height: 80%;
+    height: 75%;
     margin: 0 auto;
     padding: 0;
 
@@ -408,11 +408,11 @@ iframe[src*="www.google.com/maps/embed"] {
 }
 
 .re_tel > a p{
-    font-size: 1,25em;
+    font-size: 1.25em;
 }
 
 .re_tel > p{
-    font-size: .5em;
+    font-size: .75em;
 }
 
 .re_online{
@@ -421,7 +421,7 @@ iframe[src*="www.google.com/maps/embed"] {
     justify-content: center;
     align-items: center;
 }
-.re_online.none{
+.re_online1{
     margin-bottom: 0 !important;
 }
 
